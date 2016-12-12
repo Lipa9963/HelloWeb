@@ -669,6 +669,7 @@ function insertLatexTOdiv(str){
                     dataType: "json",
                     success: function (data) {
                         if (data) {
+                            alert("cxc");
                             //$("#table td").remove();
                             $(document).ready(function() {
                                 $("#tableRe").find("tr:gt(0)").remove();
