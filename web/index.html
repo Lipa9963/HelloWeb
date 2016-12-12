@@ -1,0 +1,131 @@
+<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <!--        <meta name="viewport" content="initial-scale=1.0">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+        <script type="text/javascript" src="../MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="css/mathquill.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="js/mathquill.js"></script>
+        <script>
+            var MQ = MathQuill.getInterface(2);
+        </script>
+
+        <title>index</title>
+        <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script src="js/javascript.js"></script>
+        <link rel="stylesheet" href="css/standardize.css">
+        <link rel="stylesheet" href="css/index-grid.css">
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+
+    <body>
+
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span> 
+                    </button>
+                    <a class="navbar-brand" href="#">WebSiteName</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Page 1</a></li>
+                        <li><a href="#">Page 2</a></li> 
+                        <li><a href="#">Page 3</a></li> 
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">    
+            <div class="row">
+                <div class="col-sm-5" id="inputDiv">
+
+                </div>
+                <div class="col-sm-2" id="submit">
+                    <button type="button" class="s-8" id="send">\[ \triangleright \]</button>
+                </div>
+            </div>
+        </div>
+
+<div class="container">            
+    <div class="well" id="alcultor">
+        <div id="tempCalcultot">
+        <button id="righbracket" onclick="reply_click(this.id)" class="btn btn-primary btn-sm btn-responsive">(</button>
+        <button id="leftbracket" onclick="reply_click(this.id)" class="btn btn-primary btn-sm btn-responsive">)</button>
+        <button id="or" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">|</button>
+        <button id="largebracketr" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">[</button>
+        <button id="largebracketl" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">]</button>
+        <button id="mul" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">\[*\]</button>
+        
+        <button id="squrexp" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">\[\sqrt[?]{?}\]</button>
+         <button id="x" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">x<br></button> 
+         <button id="seven" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">7</button>
+         <button id="eight" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">8</button>
+         <button id="nine" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">9</button>
+         <button id="divisionLarge" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">\[{\textstyle{? \over ?}}\]</button>
+         <button id="division" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">/</button>
+         <button id="y" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">y</button>
+         <button id="four" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">4</button>
+         <button id="five" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">5</button>
+         <button id="six" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">6</button>
+         <button id="plus" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">+</button>
+         <button id="minus" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">-</button>
+         <button id="z" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">z</button>
+         <button id="one" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">1</button>
+          <button id="two" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">2</button>
+         <button id="abc" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">abc</button>
+          <button id="three" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">3</button>
+         <button id="zero" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">0</button>
+         <button id="point" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">.</button>
+         <button id="expo" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">^</button>
+         <button id="expoLarge" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">\[{?^?}\]</button>
+         <button id="square" onclick="insertMathField('\\sqrt{}')" class="btn btn-info btn-sm btn-responsive">\[\sqrt ? \]</button>
+         <button id="space" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">⏘</button>
+         <button id="equal" onclick="reply_click(this.id)" class="btn btn-info btn-sm btn-responsive">=</button>
+         </div>
+    </div>       
+    
+</div>
+
+
+        <div class="table-responsive" id="tableRe">
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                                                
+                    </tr>
+                </thead>
+            </table>
+        </div>        
+
+    </body>
+</html>
