@@ -10,9 +10,6 @@
                     <file>${libs.Java-EE-GlassFish-v3-Prelude.classpath}</file>
                 </library>
                 <library dirs="200">
-                    <file>${file.reference.webservices-osgi.jar}</file>
-                </library>
-                <library dirs="200">
                     <file>${file.reference.json-simple-1.1.1.jar-1}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
