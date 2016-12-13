@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -81,7 +82,10 @@ public class Servlet extends HttpServlet {
             throws ServletException, IOException {
         //processRequest(request, response);
         
+        // System.console().writer().println("Fsssdsd");
         
+        
+         
           Cookie cookie[] = request.getCookies();
           if(cookie == null)
           {
@@ -89,6 +93,8 @@ public class Servlet extends HttpServlet {
              response.addCookie(cookieNew);
               
           }
+//          response.setContentType("text/html");
+           response.sendRedirect("index.html"); 
           
           
     }

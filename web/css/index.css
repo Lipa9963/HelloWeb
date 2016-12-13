@@ -797,8 +797,9 @@ th{
     
     }
 }
-
-
+.custom {
+    width: 708em !important;
+}
 
 @media (max-width: 768px) {
   .btn-responsive {
