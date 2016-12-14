@@ -508,7 +508,7 @@ function insertLatexTOdiv(str){
                     dataType: "json",
                     success: function (data) {
                         if (data) {
-                            alert("cxc");
+                            
                             //$("#table td").remove();
                             $(document).ready(function() {
                                 $("#tableRe").find("tr:gt(0)").remove();
@@ -526,6 +526,10 @@ function insertLatexTOdiv(str){
                                                 + "</tr>";
                                     
                                 }
+                                 txt += "<tr>"
+                                                + "<td>" + data.list[i-1].infixAfter + "</td>" 
+                                                + "</tr>";
+                                    
                                 if (txt !== "") {
                                     
                                     $("#alcultor").hide();
