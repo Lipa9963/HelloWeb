@@ -17,29 +17,43 @@ import static org.jboss.logging.MDC.put;
  */
 public class ShuntingYard {
     
+    
+    
     private enum Operator
     {
         ADD(1), SUBTRACT(2), MULTIPLY(3), DIVIDE(4),EXPONENT(5),SQUARE(6);
         final int precedence;
         Operator(int p) { precedence = p; }
+       
+     
+        
     }
 
-    private static Map<String, Operator> ops = new HashMap<String, Operator>() {{
-        put("+", Operator.ADD);
-        put("-", Operator.SUBTRACT);
-        put("*", Operator.MULTIPLY);
-        put("/", Operator.DIVIDE);
-        put("^", Operator.EXPONENT);
-        put("√", Operator.SQUARE);
+    private static Map<String, Integer> ops = new HashMap<String, Integer>() {{
+        put("+", 1);
+        put("-", 2);
+        put("*", 3);
+        put("/", 4);
+        put("^", 5);
+        put("√", 6);
     }};
 
     private static boolean isHigerPrec(String op, String sub)
     {
-        return (ops.containsKey(sub) && ops.get(sub).precedence >= ops.get(op).precedence);
+        return (ops.containsKey(sub) && ops.get(sub) >= ops.get(op));
+    }
+    
+    private static void setMap(String[] round)
+    {
+        for(int i =0; i<round.length; i++)
+        {
+            ops.put(round[i], i);
+        }
     }
 
-    public static String[] postfix(String[] infix)
+    public static String[] postfix(String[] infix, String[] round)
     {
+        setMap(round);
         StringBuilder output = new StringBuilder();
         Deque<String> stack  = new LinkedList<>();
 

@@ -31,9 +31,13 @@ body {
 }
 #table{
   display: none;  
-  width: 59.2668202764%;
+/*  width: 79.2668202764%;
   height: 274px;
-  margin: 14px 0 0 14.87097%;
+  margin: 13px 0 0 7.87097%;*/
+ 
+  width: 78.3364055299%;
+  margin: 20px 0 0 3.67922%;
+
 }
 #tempCalcultot{
      
@@ -112,15 +116,16 @@ body {
 
 table, th, td {
     border: 1px solid black;
+    text-align: left;
 }
 td{
-  text-align: right;
+  text-align: left;
   vertical-align: bottom;
   height: 0.1px;
   text-align:left;
 }
 td:last-child {
-    text-align: right;
+    text-align: left;
 }
 th{
     text-align: center;
@@ -801,7 +806,9 @@ th{
     width: 78px !important;
     height: 52px!important;
 }
-
+.w-medium{
+    width: 17px;
+}
 @media (max-width: 768px) {
   .btn-responsive {
      
