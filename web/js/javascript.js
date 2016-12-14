@@ -47,146 +47,18 @@ $(document).ready(function(){
 });
 
 
-function replyClickMath(clickId){
-   
-    //  alert(document.getElementById('inputDiv').innerHTML);
-   // document.getElementById('inputDiv').focus();
-       // alert(clickId);
-        var newExpre="null";
-        switch (clickId){
-               
-        case 96:
-        newExpre ="0";
-        break;
-        case 97:
-        case 49:
-        newExpre ="1";
-        break;
-        case 98:
-        case 50:
-        newExpre ="2";
-        break;
-        case 99:
-        case 51:    
-        newExpre ="3";
-        break;
-        case 100:
-        case 52:    
-        newExpre ="4";
-        break;
-        case 101:
-        case 53:
-        newExpre ="5";
-        break;
-        case 102:
-        case 54:    
-        newExpre ="6";
-        break;
-        case 103:
-        case 55:
-        newExpre ="7";
-        break;
-        case 104:
-        case 56:    
-        newExpre ="8";
-        break;
-        case 105:
-        case 57:
-        newExpre ="9";
-        break;
-        case 107:
-        case 187:    
-        newExpre ="+";
-        break;
-        case 109:
-        case 189:    
-        newExpre ="-";
-        break;
-        case 106:
-        newExpre ="*";
-        break;
-        case 111:
-        newExpre ="\\frac{?}{?}";
-        break;
-    }
-    if(newExpre !=="null"){
-      addClick(newExpre);  
-    }
-    
-}
-
-function reply_click(clicked_id) {
-
-    //input_click_event();
-    switch (clicked_id) {
-        case "minus":
-            clicked_id = "-";
-            break;
-        case "plus":
-            clicked_id = "+";
-            break;
-        case "division":
-            clicked_id = "/";
-            break;
-        case "expo":
-            clicked_id = "^";
-            break;
-        case "mul":
-            clicked_id = "*";
-            break;
-        case "largebracketl":
-            clicked_id = "]";
-            break;
-        case "largebracketr":
-            clicked_id = "[";
-            break;
-        case "or":
-            clicked_id = "|";
-            break;
-        case "righbracket":
-            clicked_id = "(";
-            break;
-        case "leftbracket":
-            clicked_id = ")";
-            break;
-        case "percent":
-            clicked_id = "%";
-            break;
-        case "point":
-            clicked_id = ".";
-            break;
-        case "abc":
-            clicked_id = "";
-            break;
-        case "equal":
-            clicked_id = "";
-            break;
-        case "square":
-            clicked_id = '\u221A' + "()";
-            is_add_square = true;
-            break;
-        case "space":
-            clicked_id = '\xA0';
-            break;
-
-        default:
 
 
-    }
-
-
-    InsertText(clicked_id);
-}
 
 function insertMathField (expression){
-    var temp ='/sqrt' + '\\sqrt[]{}';
-    
+       
     var MQ = MathQuill.getInterface(2);
     var answerSpan = document.getElementById('inputDiv');
      var mathField = MQ.MathField(answerSpan);   
  
     //  mathField.typedText(expression);
      mathField.write(expression);
+     mathField.focus();
 }
 
 function runMathJax(id){
@@ -227,48 +99,7 @@ function getCaret(el) {
     return 0;
  }    
 
-    function InsertText(str) {
-
-        var textarea = document.getElementById('output');
-        var currentPos = getCaret(textarea);
-        var strLeft = textarea.value.substring(0, currentPos);
-        var strMiddle = str;
-        var strRight = textarea.value.substring(currentPos, textarea.value.length);
-        textarea.value = strLeft + strMiddle + strRight;
-
-        setCaretPosition("output", currentPos + str.length);
-    }
-     function InsertTextToDiv(str) {
-
-        var textarea = document.getElementById('inputDiv');
-        var currentPos = getCaret(textarea);
-        alert(currentPos);
-        var innerHtml = textarea.innerHTML.substring(0,currentPos);
-        var strLeft = textarea.value.substring(0, currentPos);
-        var strMiddle = str;
-        var strRight = textarea.value.substring(currentPos, textarea.value.length);
-        textarea.value = strLeft + strMiddle + strRight;
-
-        setCaretPosition("inputDiv", currentPos + str.length);
-    }
-
-    function setCaretPosition(elemId, caretPos) {
-        var elem = document.getElementById(elemId);
-
-        if (elem != null) {
-            if (elem.createTextRange) {
-                var range = elem.createTextRange();
-                range.move('character', caretPos);
-                range.select();
-            } else {
-                if (elem.selectionStart) {
-                    elem.focus();
-                    elem.setSelectionRange(caretPos, caretPos);
-                } else
-                    elem.focus();
-            }
-        }
-    }
+    
     function KeyPress(e) {
 
         var keynum;
@@ -498,6 +329,14 @@ window.onload=function(){
       }
     }
   });
+  
+     var answerSpan = document.getElementById('inputDiv');
+     var mathField = MQ.MathField(answerSpan);   
+ 
+    //  mathField.typedText(expression);
+     
+     mathField.focus();
+  
     //var mb = document.getElementById("div1");
     //mb.addEventListener("keydown", tt);
     //mb.addEventListener("click", handler2);

@@ -66,7 +66,7 @@
 
         <div class="container">    
             <div class="row">
-                <div class="col-sm-5" id="inputDiv">
+                <div class="col-sm-5" id="inputDiv"  >
 
                 </div>
                 <div class="col-sm-2" id="submit">
@@ -78,21 +78,41 @@
 <div class="container">            
     <div class="well" id="alcultor">
         
-        
+        <div class = "btn-toolbar" role = "toolbar">
    
    <div class = "btn-group-lg">
-      <button type = "button" class = "btn btn-default">(</button>
-      <button type = "button" class = "btn btn-default">)</button>
-      <button type = "button" class = "btn btn-default">|</button>
-      <button type = "button" class = "btn btn-default">[</button>
-      <button type = "button" class = "btn btn-default">]</button>
-      <button type = "button" class = "btn btn-default">\[*\]</button>
-      <button type = "button" class = "btn btn-default">\[\sqrt[?]{?}\]</button>
-      <button type = "button" class = "btn btn-default">x</button>
-      <button type = "button" class = "btn btn-default">7</button>
-      <button type = "button" class = "btn btn-default">8</button>
-      <button type = "button" class = "btn btn-default">9</button>
-      <button type = "button" class = "btn btn-default">\[{\textstyle{? \over ?}}\]</button>
+       <button type = "button" class = "btn btn-default custom" onclick="insertMathField('(')">(</button>
+       <button type = "button" class = "btn btn-default custom" onclick="insertMathField(')')">)</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('|')">|</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('[')" >[</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField(']')">]</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('*')">\[*\]</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('^')">^</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('X')">x</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('7')">7</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('8')">8</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('9')">9</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('+')">+</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('-')">-</button>
+      <button type = "button" class = "btn btn-default custom"onclick="insertMathField('\\frac{?}{?}')">\[{\textstyle{? \over ?}}\]</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('/')">/</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('y')">y</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('6')">6</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('5')">5</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('4')">4</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('.')">.</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('\\sqrt{}')">\[\sqrt ? \]</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('\\nthroot3{64}=4')">\[\sqrt[?]{?}\]</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('?^?')">\[{?^?}\]</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('z')">z</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('1')">1</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('2')">2</button>
+      
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('3')">3</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('0')">0</button>
+    
+      <button type = "button" class = "btn btn-default custom">⏘</button>
+      <button type = "button" class = "btn btn-default custom" onclick="insertMathField('=')">=</button>
    </div>
    
 
@@ -119,7 +139,7 @@
       <button type = "button" class = "btn btn-default">Button 18</button>
    </div>
             -->
-
+</div>
         
 <!--        <div id="tempCalcultot">
         <button id="righbracket" onclick="reply_click(this.id)" class="btn btn-primary btn-sm btn-responsive">(</button>
