@@ -5,9 +5,11 @@
  */
 package org.mypackage.algorithm;
 
+import java.util.Arrays;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import static org.jboss.logging.MDC.put;
 
@@ -31,29 +33,24 @@ public class ShuntingYard {
 
     private static Map<String, Integer> ops = new HashMap<String, Integer>() {{
         put("+", 1);
-        put("-", 2);
-        put("*", 3);
-        put("/", 4);
-        put("^", 5);
-        put("√", 6);
+        put("-", 1);
+        put("*", 2);
+        put("/", 2);
+        put("^", 3);
+        put("√", 3);
     }};
 
     private static boolean isHigerPrec(String op, String sub)
     {
-        return (ops.containsKey(sub) && ops.get(sub) >= ops.get(op));
+        if(!ops.containsValue(sub))return false;
+        return ops.get(sub)>=ops.get(op);
+                
     }
     
-    private static void setMap(String[] round)
+  
+    public static String[] postfix(String[] infix)
     {
-        for(int i =0; i<round.length; i++)
-        {
-            ops.put(round[i], i);
-        }
-    }
-
-    public static String[] postfix(String[] infix, String[] round)
-    {
-        setMap(round);
+       
         StringBuilder output = new StringBuilder();
         Deque<String> stack  = new LinkedList<>();
 

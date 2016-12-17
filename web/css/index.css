@@ -402,6 +402,12 @@ th{
   cursor: text;
   -webkit-appearance: textfield;
 }
+
+.buttensgroup{
+    background-color: red!important;
+    margin: 82px 0 0 -62.67922%!important;
+}
+
 #inputDiv{
   display: block;
   position: relative;

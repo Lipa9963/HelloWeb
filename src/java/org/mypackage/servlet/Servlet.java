@@ -21,6 +21,7 @@ import org.json.simple.JSONObject;
 import org.mypackage.algorithm.ShuntingYard;
 import org.mypackage.controllers.MainController;
 import org.mypackage.jsons.AnswerList;
+import org.mypackage.jsons.RoundStep;
 
 
 /**
@@ -112,12 +113,13 @@ public class Servlet extends HttpServlet {
             throws ServletException, IOException {
         //processRequest(request, response);
          AnswerList jsonList = new AnswerList();
+         RoundStep roundStep = new RoundStep();
          String exprechion = request.getParameter("name") ;
-         jsonList = MainController.startProcessing(exprechion);
+         roundStep = MainController.startProcessing(exprechion);
          
         
        // ObjectMapper mapper = new ObjectMapper();
-        String json = new Gson().toJson(jsonList);
+        String json = new Gson().toJson(roundStep);
         
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
