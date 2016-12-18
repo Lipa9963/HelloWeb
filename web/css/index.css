@@ -114,6 +114,10 @@ body {
   margin-bottom: 222px; 
 }
 
+#divAfter{
+    display: none;
+}
+
 table, th, td {
     border: 1px solid black;
     text-align: left;
@@ -403,9 +407,13 @@ th{
   -webkit-appearance: textfield;
 }
 
-.buttensgroup{
-    background-color: red!important;
-    margin: 82px 0 0 -62.67922%!important;
+#buttensgroup{
+/*    background-color: #D5DDE9;*/
+    margin: 87px 0 0 10.1%;
+    width: 50.3364055299%;
+    height: 34.4px;
+    
+    
 }
 
 #inputDiv{
@@ -414,9 +422,9 @@ th{
   float: left;
   clear: both;
   z-index: 29;
-  width: 76.3364055299%;
-  height: 84px;
-  margin: 129px 0 0 4.67922%;
+  width: 70.3364055299%;
+  height: 84.4px;
+  margin: 12px 0 0 9.0%;
   background-color: rgb(242, 242, 242);
   font-size:20px;
   font: -moz-field;
@@ -809,6 +817,10 @@ th{
     }
 }
 .custom {
+    width: 78px !important;
+    height: 52px!important;
+}
+.groupBut{
     width: 78px !important;
     height: 52px!important;
 }

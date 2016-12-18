@@ -147,7 +147,7 @@ public class ReversePolishSolution {
                         bb = FormatNumbers.formatDouble(String.valueOf(b));
                         aa= FormatNumbers.formatDouble(String.valueOf(a)); 
               
-                        double db =Math.pow(2, 5);
+                        double db =Math.pow(b,a );
                         long mylong = (long)80;
                         
                         String ff = FormatNumbers.formatDouble(Double.toString(db));

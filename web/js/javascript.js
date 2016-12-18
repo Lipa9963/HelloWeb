@@ -131,10 +131,9 @@ function input_click_event() {
 }
 
 function reset() {
-    $("#divAfterSubmit").hide();
-    $("#clcultor").show();
-    var elem = document.getElementById("output");
-    elem.focus();
+    $("#divAfter").hide();
+    $("#alcultor").show();
+    $("#table").hide();
 
 }
 
@@ -219,41 +218,10 @@ window.onload = function () {
 
 
 
-function addClick(newExpression) {
-
-    if ($('#inputDiv').is(':empty')) {
-        var output = addBracketsLatex(newExpression);
-        insertLatexTOdiv(output);
-        setTimeout("setMouse()", 500);
-        return;
-    }
-
-    //  var el = document.getElementById("inputDiv");
-    //  var range = window.getSelection().getRangeAt(0);
-    // var position = getCharacterOffsetWithin(range, el);
-    var position = reportSelection();
-    //alert(position);
-    var script = GetElementInsideContainer("inputDiv", "MathJax-Element-" + MathJaxElementScriptCount);
-    //  alert(script.innerHTML);
-
-
-    insertSubString(script.innerHTML, newExpression, position);
-
-    setTimeout("setMouse()", 200);
-
-}
 
 
 
-function setMouse() {
 
-
-    var urlDiv = "MathJax-Element-" + MathJaxElementFrameCount + "-Frame";
-    var elem = document.getElementById(urlDiv);
-    document.getElementById(urlDiv).focus();
-    setEndOfContenteditable(elem);
-    document.getElementById("inputDiv").focus();
-}
 
 
 
@@ -345,6 +313,7 @@ $(document).on("click", "#submit", function () {  // When HTML DOM "click" event
                         $("#alcultor").hide();
                         $("#table").show();
                         $("#table").append(txt);
+                        $("#divAfter").show();
                         runMathJax();
                     }
                 }
