@@ -42,7 +42,7 @@ public class ShuntingYard {
 
     private static boolean isHigerPrec(String op, String sub)
     {
-        if(!ops.containsValue(sub))return false;
+        if(ops.containsKey(sub)==false)return false;
         return ops.get(sub)>=ops.get(op);
                 
     }

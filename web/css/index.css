@@ -20,14 +20,45 @@ body {
   color: rgb(0, 0, 0);
   border-radius: 10px;
 }
-
+#inputDiv{
+  display: block;
+  position: relative;
+  float: left;
+  clear: both;
+ 
+  width: 70.3364055299%;
+  height: 84.4px;
+  margin: 12px 0 0 9.0%;
+  background-color: rgb(242, 242, 242);
+  font-size:20px;
+  font: -moz-field;
+  color: rgb(0, 0, 0);
+  outline: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  cursor: text;
+  border-style: solid;
+  border-width:  medium;
+  
+  
+ 
+}
 #alcultor {
   float: left;
-  width: 59.2668202764%;
+  width: 70.2668202764%;
   height: 274px;
-  margin: 14px 0 0 11.87097%;
+/*  margin: 14px 0 0 11.87097%;*/
+  margin: 20px 0 0 6.0%;
   background-color: #CBDBEE;
   
+}
+#bar{
+   width: 62.2668202764%;
+  height: 17px;
+/*  margin: 14px 0 0 11.87097%;*/
+  margin: 10px 0 0 14.0%;
+  background-color: #CBDBEE; 
 }
 #table{
   display: none;  
@@ -416,30 +447,7 @@ th{
     
 }
 
-#inputDiv{
-  display: block;
-  position: relative;
-  float: left;
-  clear: both;
-  z-index: 29;
-  width: 70.3364055299%;
-  height: 84.4px;
-  margin: 12px 0 0 9.0%;
-  background-color: rgb(242, 242, 242);
-  font-size:20px;
-  font: -moz-field;
-  color: rgb(0, 0, 0);
-  outline: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-  cursor: text;
-  border-style: solid;
-  border-width:  medium;
-  
-  
- 
-}
+
 #percent {
   display: block;
   position: relative;
