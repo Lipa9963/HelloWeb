@@ -25,6 +25,10 @@
                     <file>${libs.Comet-GlassFish-v3.classpath}</file>
                 </library>
                 <library dirs="200">
+                    <file>${file.reference.org.apache.commons.dbcp.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
                     <file>${file.reference.log4j-1.2.17.zip}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>

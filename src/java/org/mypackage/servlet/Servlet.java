@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.simple.JSONObject;                            
 import org.mypackage.algorithm.ShuntingYard;
 import org.mypackage.controllers.MainController;
+import org.mypackage.database.DbControler;
 import org.mypackage.jsons.AnswerList;
 import org.mypackage.jsons.RoundStep;
 
@@ -92,6 +93,8 @@ public class Servlet extends HttpServlet {
           {
              Cookie cookieNew = new Cookie("dfd","Dfd"); 
              response.addCookie(cookieNew);
+             DbControler dbControler = new DbControler();
+             cookieNew = dbControler.getNewCookie();
               
           }
 //          response.setContentType("text/html");
