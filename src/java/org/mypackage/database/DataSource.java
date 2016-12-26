@@ -12,6 +12,8 @@ import org.apache.commons.dbcp.BasicDataSource;
 
 
 
+
+
 /**
  *
  * @author admin
@@ -22,11 +24,20 @@ public class DataSource {
     private BasicDataSource ds;
     
     private DataSource(){
+        
+        try {
+            
         ds = new BasicDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
         ds.setUsername("root");
         ds.setPassword("hzi9963");
         ds.setUrl("jdbc:mysql://localhost:3306/mydatabase");
+        } catch (Exception e)
+        {
+            String s = e.toString();
+            
+        }
+        
     }
     
     public static DataSource getInstance()

@@ -89,7 +89,7 @@ public class Servlet extends HttpServlet {
         
          
           Cookie cookie[] = request.getCookies();
-          if(cookie == null)
+          if(cookie != null || cookie == null)
           {
              Cookie cookieNew = new Cookie("dfd","Dfd"); 
              response.addCookie(cookieNew);
