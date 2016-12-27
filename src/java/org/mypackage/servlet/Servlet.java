@@ -84,19 +84,21 @@ public class Servlet extends HttpServlet {
             throws ServletException, IOException {
         //processRequest(request, response);
         
-        // System.console().writer().println("Fsssdsd");
         
         
-         
+        
+         DbControler dbControler = new DbControler();
           Cookie cookie[] = request.getCookies();
-          if(cookie != null || cookie == null)
+          if(cookie == null || cookie != null)
           {
-             Cookie cookieNew = new Cookie("dfd","Dfd"); 
-             response.addCookie(cookieNew);
-             DbControler dbControler = new DbControler();
-             cookieNew = dbControler.getNewCookie();
-              
+            Cookie cookieNew = new Cookie("xcxz","cxz"); 
+                        
+            cookieNew = dbControler.getNewCookie();
+            response.addCookie(cookieNew);
           }
+          
+          
+          
 //          response.setContentType("text/html");
            response.sendRedirect("index.html"); 
           

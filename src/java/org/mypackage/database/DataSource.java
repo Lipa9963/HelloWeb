@@ -4,11 +4,13 @@
  * and open the template in the editor.
  */
 package org.mypackage.database;
+
 import java.beans.PropertyVetoException;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import org.apache.commons.dbcp.BasicDataSource;
+import org.apache.commons.pool.impl.GenericObjectPool;
 
 
 
