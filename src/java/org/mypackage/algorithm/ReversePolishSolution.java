@@ -30,7 +30,7 @@ public class ReversePolishSolution {
     private Answer answer = new Answer();
     private AnswerStep answerStep;
     
-     private Answer answerForAfter = new Answer();
+     
     private Double a ,b;
 
     public  AnswerStep evalRPN(String[] tokens) {
@@ -46,7 +46,7 @@ public class ReversePolishSolution {
         stack.clear();
         mylist.clear();
         answerStep = new AnswerStep();
-        answerForAfter = new Answer();
+       
         
          //set before
          answerStep.setPostFixBefore(tokens);

@@ -89,14 +89,17 @@ public class Servlet extends HttpServlet {
         
          DbControler dbControler = new DbControler();
           Cookie cookie[] = request.getCookies();
-          if(cookie == null || cookie != null)
+          if(cookie == null)
           {
-            Cookie cookieNew = new Cookie("xcxz","cxz"); 
+            Cookie cookieNew = null; 
                         
             cookieNew = dbControler.getNewCookie();
             response.addCookie(cookieNew);
+          }else
+          {
+              dbControler.addUserVisit(cookie[0]);
+              
           }
-          
           
           
 //          response.setContentType("text/html");

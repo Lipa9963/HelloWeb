@@ -48,7 +48,7 @@ public class DbControler {
        try {
            
            statement = conn.createStatement();
-           resultSet = statement.executeQuery("SELECT COUNT(*) AS total FROM cookie WHERE value!=null");
+           resultSet = statement.executeQuery("SELECT COUNT(*) AS total FROM cookie");
         
            while (resultSet.next()) {
                 value = resultSet.getInt(1);
@@ -59,9 +59,9 @@ public class DbControler {
            cookie = new Cookie("Qliger", newValue);
            cookie.setMaxAge(Integer.MAX_VALUE);
            
-           PreparedStatement pstmt = conn.prepareStatement("INSERT INTO cookie)(value,numOfVisit) VALUE (?,?)");
+           PreparedStatement pstmt = conn.prepareStatement("INSERT INTO cookie(value,visit) VALUE(?,?)");
            pstmt.setInt(1, value);
-           pstmt.setInt(2,0);
+           pstmt.setInt(2,1);
            pstmt.executeUpdate();          
              
            
@@ -99,13 +99,13 @@ public class DbControler {
         {
           
            statement = conn.createStatement();
-           resultSet = statement.executeQuery("SELECT numOfvisit FROM cookie WHERE value=="+cookie.getValue()+"");
+           resultSet = statement.executeQuery("SELECT visit FROM cookie WHERE value="+cookie.getValue()+"");
             while (resultSet.next()) {
                 numOfvisit = resultSet.getInt(1);
            }   
             
            
-           PreparedStatement pstmt = conn.prepareStatement("UPDATE cookie SET numOfVisit = ?  WHERE value=="+cookie.getValue()+"");
+           PreparedStatement pstmt = conn.prepareStatement("UPDATE cookie SET visit = ?  WHERE value="+cookie.getValue()+"");
            pstmt.setInt(1, numOfvisit+1);
            pstmt.executeUpdate();           
             
