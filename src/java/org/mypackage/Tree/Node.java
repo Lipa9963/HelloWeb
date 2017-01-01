@@ -13,7 +13,8 @@ public class Node {
      private String value;
      private boolean isOperator;
      private int priority;
-     private int level;           
+     private int level;
+     private int id;
 
     
      
@@ -130,5 +131,19 @@ public class Node {
 
     public void setLevel(int level) {
         this.level = level;
+    }
+
+    /**
+     * @return the id
+     */
+    public int getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(int id) {
+        this.id = id;
     }
 }
